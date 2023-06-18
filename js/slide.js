@@ -9,11 +9,16 @@ export default class Slide {
   }
 
   addSlideEvents() {
-    this.wrapper.addEventListener('mousedown', () => this.onStart);
+    this.wrapper.addEventListener('mousedown', this.onStart);
+  }
+
+  bindEvents() {
+    this.onStart = this.onStart.bind(this);
   }
 
   init() {
     this.addSlideEvents();
+    this.bindEvents();
     return this;
   }
 }
