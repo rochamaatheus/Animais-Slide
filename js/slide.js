@@ -1,6 +1,6 @@
 export default class Slide {
   constructor(wrapper, slide) {
-    this.wrapper = wrapper;
-    this.slide = slide;
+    this.wrapper = document.querySelector(wrapper);
+    this.slide = document.querySelector(slide);
   }
 }
