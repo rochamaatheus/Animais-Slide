@@ -1,2 +1,2 @@
-# Aguarda
+# Aguarde
 - Ainda estou trabalhando neste projeto...
