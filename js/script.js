@@ -1,1 +1,3 @@
-import slide from './slide.js';
+import Slide from './slide.js';
+
+const slide = new Slide();
