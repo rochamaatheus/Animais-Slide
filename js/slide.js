@@ -142,6 +142,7 @@ export default class Slide {
     this.bindEvents();
     this.addSlideEvents();
     this.slidesConfig();
+    this.changeSlide(0);
     this.addResizeEvent();
     return this;
   }
