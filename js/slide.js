@@ -1,3 +1,5 @@
+import debounce from './debounce.js';
+
 export default class Slide {
   constructor(wrapper, slide, activeClass) {
     this.wrapper = document.querySelector(wrapper);
@@ -72,7 +74,7 @@ export default class Slide {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
-    this.onResize = this.onResize.bind(this);
+    this.onResize = debounce(this.onResize.bind(this), 200);
   }
 
   // Slides config
@@ -128,7 +130,7 @@ export default class Slide {
     setTimeout(() => {
       this.slidesConfig();
       this.changeSlide(this.index.active);
-    }, 500);
+    }, 200);
   }
 
   addResizeEvent() {
