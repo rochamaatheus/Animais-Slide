@@ -241,10 +241,12 @@ export class Slide {
 export class SlideNav extends Slide {
   /**
    * Classe responsável por criar um Slide com navegação.
-   * @param {...any} args - Argumentos do construtor da classe Slide.
+   * @param {string} wrapper - Seletor do elemento wrapper do slide.
+   * @param {string} slide - Seletor do elemento slide.
+   * @param {string} activeClass - Classe para indicar o slide ativo.
    */
-  constructor(...args) {
-    super(...args);
+  constructor(wrapper, slide, activeClass) {
+    super(wrapper, slide, activeClass);
     this.bindControlEvent();
   }
 
