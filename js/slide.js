@@ -151,6 +151,11 @@ export class Slide {
 }
 
 export class SlideNav extends Slide {
+  constructor(...args) {
+    super(...args);
+    this.bindControlEvent();
+  }
+
   addArrow(prev, next) {
     this.prevElement = document.querySelector(prev);
     this.nextElement = document.querySelector(next);
@@ -171,6 +176,24 @@ export class SlideNav extends Slide {
       }</a></li>`;
     });
     this.wrapper.appendChild(control);
-    console.log(control);
+    return control;
+  }
+
+  eventControl(item, index) {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+      this.changeSlide(index);
+    });
+  }
+
+  addControl(customControl) {
+    this.control =
+      document.querySelector(customControl) || this.createControl();
+    this.controlArray = [...this.control.children];
+    this.controlArray.forEach(this.eventControl);
+  }
+
+  bindControlEvent() {
+    this.eventControl = this.eventControl.bind(this);
   }
 }
