@@ -72,6 +72,7 @@ export default class Slide {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
+    this.onResize = this.onResize.bind(this);
   }
 
   // Slides config
@@ -123,11 +124,23 @@ export default class Slide {
     if (this.index.next !== undefined) this.changeSlide(this.index.next);
   }
 
+  onResize() {
+    setTimeout(() => {
+      this.slidesConfig();
+      this.changeSlide(this.index.active);
+    }, 500);
+  }
+
+  addResizeEvent() {
+    window.addEventListener('resize', this.onResize);
+  }
+
   init() {
     this.transition(true);
     this.bindEvents();
     this.addSlideEvents();
     this.slidesConfig();
+    this.addResizeEvent();
     return this;
   }
 }
