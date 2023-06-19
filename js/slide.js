@@ -148,4 +148,9 @@ export class Slide {
   }
 }
 
-export class SlideNav extends Slide {}
+export class SlideNav extends Slide {
+  addArrow(prev, next) {
+    this.prevElement = document.querySelector(prev);
+    this.nextElement = document.querySelector(next);
+  }
+}
