@@ -1,7 +1,8 @@
 export default class Slide {
-  constructor(wrapper, slide) {
+  constructor(wrapper, slide, activeClass) {
     this.wrapper = document.querySelector(wrapper);
     this.slide = document.querySelector(slide);
+    this.activeClass = activeClass;
     this.dist = { finalPosition: 0, startX: 0, movement: 0 };
   }
 
@@ -104,6 +105,10 @@ export default class Slide {
     this.moveSlide(activeSlide.position);
     this.slidesIndexNav(index);
     this.dist.finalPosition = activeSlide.position;
+  }
+
+  changeActiveClass() {
+    this.slideArray[this.index.active].element.classList.add(this.activeClass);
   }
 
   activePrevSlide() {
