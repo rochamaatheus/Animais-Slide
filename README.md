@@ -58,11 +58,11 @@ HTML
 <div>
   <ul class="custom-controls">
     <li><img src="img/foto1-thumb.jpg" alt="Raposa" /></li>
-    <li><img src="/img/foto2-thumb.jpg" alt="Esquilo" /></li>
-    <li><img src="/img/foto3-thumb.jpg" alt="Urso" /></li>
-    <li><img src="/img/foto4-thumb.jpg" alt="Lobo" /></li>
-    <li><img src="/img/foto5-thumb.jpg" alt="Macaco" /></li>
-    <li><img src="/img/foto6-thumb.jpg" alt="Leão" /></li>
+    <li><img src="img/foto2-thumb.jpg" alt="Esquilo" /></li>
+    <li><img src="img/foto3-thumb.jpg" alt="Urso" /></li>
+    <li><img src="img/foto4-thumb.jpg" alt="Lobo" /></li>
+    <li><img src="img/foto5-thumb.jpg" alt="Macaco" /></li>
+    <li><img src="img/foto6-thumb.jpg" alt="Leão" /></li>
   </ul>
 </div>
 <div class="slide-wrapper">
