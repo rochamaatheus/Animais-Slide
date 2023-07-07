@@ -1,12 +1,12 @@
 # Slide Automático
 
-![Site Demo](site_demo.png)
+![Capa_Site](https://i.imgur.com/C8fuumQ.png)
 
 Este projeto consiste em um slide automático para exibição de conteúdo em formato de slide. Com pequenas alterações manuais no seu HTML e CSS, você pode criar um slide funcional apenas passando os containers necessários na classe.
 
 [Acesse o site](https://rochamaatheus.github.io/Animais-Slide/index.html)
 
-![Logo](logo.png)
+<img align="center" alt="Rocha-JavaScript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
 
 🚀 Linguagem utilizada: JavaScript
 
